@@ -1,0 +1,39 @@
+{
+  "headers": [
+    {
+      "source": "/about",
+      "headers": [
+        {
+          "key": "X-Pages-Msg",
+          "value": "hello about"
+        }
+      ]
+    },
+    {
+      "source": "/headers/*",
+      "headers": [
+        {
+          "key": "X-Pages-Msg",
+          "value": "hello :splat"
+        }
+      ]
+    },
+    {
+      "source": "/headers/set/:id",
+      "headers": [
+        {
+          "key": "X-Pages-Msg",
+          "value": "/headers/set/:id"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/about/*",
+      "destination": "/a/*",
+      "statusCode": 301
+    }
+  ],
+  "rewrites": []
+}
