@@ -1,16 +1,88 @@
 {
+  "name": "yorkyu-nextjs-template",
+  "redirects": [
+    {
+      "source": "/about/*",
+      "destination": "/a/:splat",
+      "statusCode": 301
+    },
+    {
+      "source": "/*.png",
+      "destination": "/:splat.svg",
+      "statusCode": 302
+    },
+    {
+      "source": "/redirect-c/:id/:name",
+      "destination": "/redirect-c2/:id/:name",
+      "statusCode": 301
+    },
+    {
+      "source": "/redirect-f/*/:name",
+      "destination": "/redirect-f/:splat/:name",
+      "statusCode": 302
+    },
+    {
+      "source": "/redirect-a/*.jpeg",
+      "destination": "/redirect-a2/:splat.png",
+      "statusCode": 308
+    }
+  ],
   "headers": [
     {
-      "source": "/about",
+      "source": "/*",
       "headers": [
         {
           "key": "X-Pages-Msg",
-          "value": "hello about"
+          "value": "12345"
+        },
+        {
+          "key": "X-Pages-Msg-2",
+          "value": "1234"
         }
       ]
     },
     {
-      "source": "/headers/*",
+      "source": "/e/*/:name",
+      "headers": [
+        {
+          "key": "X-Pages-Msg",
+          "value": "hello :splat :name"
+        }
+      ]
+    },
+    {
+      "source": "/headers-1/*",
+      "headers": [
+        {
+          "key": "X-Pages-Msg-2",
+          "value": "/headers/*, :splat"
+        },
+        {
+          "key": "X-Pages-Msg-3",
+          "value": "/headers/* :splat"
+        }
+      ]
+    },
+    {
+      "source": "/headers-2/set/:id",
+      "headers": [
+        {
+          "key": "X-Pages-Msg-2",
+          "value": "/headers/set/:id"
+        }
+      ]
+    },
+    {
+      "source": "/d/:id/:name",
+      "headers": [
+        {
+          "key": "X-Pages-Msg",
+          "value": "hello :id :name"
+        }
+      ]
+    },
+    {
+      "source": "/b/*.jpeg",
       "headers": [
         {
           "key": "X-Pages-Msg",
@@ -19,21 +91,35 @@
       ]
     },
     {
-      "source": "/headers/set/:id",
+      "source": "/f/name",
       "headers": [
         {
           "key": "X-Pages-Msg",
-          "value": "/headers/set/:id"
+          "value": "hello :splat :name"
         }
       ]
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/about/*",
-      "destination": "/a/*",
-      "statusCode": 301
+      "source": "/rewrites",
+      "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+    },
+    {
+      "source": "/rewrites-1/*",
+      "destination": "/_next/static/chunks/main-app-:splat.js"
+    },
+    {
+      "source": "/rewrites-2/:id",
+      "destination": "/_next/static/chunks/main-app-:id.js"
+    },
+    {
+      "source": "/rewrites-3/*/hello/:id",
+      "destination": "/_next/static/chunks/:splat:id.js"
+    },
+    {
+      "source": "/rewrites-4/*/world/:id",
+      "destination": "/_next/static/chunks/:splat-:id.js"
     }
-  ],
-  "rewrites": []
+  ]
 }
