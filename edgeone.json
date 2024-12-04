@@ -110,7 +110,7 @@
       "destination": "/_next/static/chunks/main-app-:splat.js"
     },
     {
-      "source": "/rewrites-2/:id",
+      "source": "/rewr(ites-2/:id",
       "destination": "/_next/static/chunks/main-app-:id.js"
     },
     {
