@@ -1,125 +1,447 @@
 {
-  "name": "yorkyu-nextjs-template",
-  "redirects": [
-    {
-      "source": "/about/*",
-      "destination": "/a/:splat",
-      "statusCode": 301
-    },
-    {
-      "source": "/*.png",
-      "destination": "/:splat.svg",
-      "statusCode": 302
-    },
-    {
-      "source": "/redirect-c/:id/:name",
-      "destination": "/redirect-c2/:id/:name",
-      "statusCode": 301
-    },
-    {
-      "source": "/redirect-f/*/:name",
-      "destination": "/redirect-f/:splat/:name",
-      "statusCode": 302
-    },
-    {
-      "source": "/redirect-a/*.jpeg",
-      "destination": "/redirect-a2/:splat.png",
-      "statusCode": 308
-    }
-  ],
-  "headers": [
-    {
-      "source": "/*",
-      "headers": [
+    "name": "yor*kyu-nextjs-template",
+    "headers": [
         {
-          "key": "X-Pages-Msg",
-          "value": "12345"
+            "source": "/*",
+            "headers": [
+                {
+                    "key": "X-Pages-Msg"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "1234"
+                }
+            ]
         },
         {
-          "key": "X-Pages-Msg-2",
-          "value": "1234"
-        }
-      ]
-    },
-    {
-      "source": "/e/*/:name",
-      "headers": [
-        {
-          "key": "X-Pages-Msg",
-          "value": "hello :splat :name"
-        }
-      ]
-    },
-    {
-      "source": "/headers-1/*",
-      "headers": [
-        {
-          "key": "X-Pages-Msg-2",
-          "value": "/headers/*, :splat"
+            "source": "/e/*/:name",
+            "headers": [
+                {
+                    "key": "X-Pages-Msg",
+                    "value": "hello :splat :name"
+                }
+            ]
         },
         {
-          "key": "X-Pages-Msg-3",
-          "value": "/headers/* :splat"
-        }
-      ]
-    },
-    {
-      "source": "/headers-2/set/:id",
-      "headers": [
+            "source": "/headers-1/*",
+            "headers": [
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/*, :splat 哈哈"
+                },
+                {
+                    "key": "X-Pages-Msg-3",
+                    "value": "/headers/* :spla 加啊t"
+                }
+            ]
+        },
         {
-          "key": "X-Pages-Msg-2",
-          "value": "/headers/set/:id"
-        }
-      ]
-    },
-    {
-      "source": "/d/:id/:name",
-      "headers": [
+            "source": "/headers-2/set/:id",
+            "headers": [
+                {
+                    "key": "X-Pages-Msg-2@哈哈",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-1",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2",
+                    "value": "/headers/set/:id"
+                },
+                {
+                    "key": "X-Pages-Msg-2222",
+                    "value": "/headers/set/:id"
+                }
+            ]
+        },
         {
-          "key": "X-Pages-Msg",
-          "value": "hello :id :name"
-        }
-      ]
-    },
-    {
-      "source": "/b/*.jpeg",
-      "headers": [
+            "source": "/d/:id/:name",
+            "headers": [
+                {
+                    "key": 1
+                }
+            ]
+        },
         {
-          "key": "X-Pages-Msg",
-          "value": "hello :splat"
-        }
-      ]
-    },
-    {
-      "source": "/f/name",
-      "headers": [
+            "source": "/b/*.jpeg",
+            "headers": [
+                {
+                    "key": "X-Pages-Msg",
+                    "value": "hello :splat"
+                }
+            ]
+        },
         {
-          "key": "X-Pages-Msg",
-          "value": "hello :splat :name"
+            "source": "/f/name",
+            "headers": [
+                {
+                    "key": "X-Pages-Msg",
+                    "value": "hello :splat :name"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/rewrites",
-      "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
-    },
-    {
-      "source": "/rewrites-1/*",
-      "destination": "/_next/static/chunks/main-app-:splat.js"
-    },
-    {
-      "source": "/rewr(ites-2/:id",
-      "destination": "/_next/static/chunks/main-app-:id.js"
-    },
-    {
-      "source": "/rewrites-3/*/hello/:id",
-      "destination": "/_next/static/chunks/:splat:id.js"
-    },
-    {
-      "source": "/rewrites-4/*/world/:id",
-      "destination": "/_next/static/chunks/:splat-:id.js"
-    }
-  ]
+    ],
+    "redirects": [
+        {
+            "source": "/about/*",
+            "destination": "/a/:splat",
+            "statusCode": 301
+        },
+        {
+            "source": "/*.png",
+            "destination": "/:splat.svg",
+            "statusCode": 302
+        },
+        {
+            "source": "/redirect-c/:id/:name",
+            "destination": "/redirect-c2/:id/:name",
+            "statusCode": 301
+        },
+        {
+            "source": "/redirect-f/*/:name",
+            "destination": "/redirect-f/:splat/:name",
+            "statusCode": 302
+        },
+        {
+            "source": "/redirect-a/*.jpeg",
+            "destination": "/redirect-a2/:splat.png",
+            "statusCode": 308
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewrites",
+            "destination": "/_next/static/chunks/main-app-32386e6b547fb5d8.js"
+        },
+        {
+            "source": "/rewrites-1/*",
+            "destination": "/_next/static/chunks/main-app-:splat.js"
+        },
+        {
+            "source": "/rewrites-2/:id",
+            "destination": "/_next/static/chunks/main-app-:id.js"
+        },
+        {
+            "source": "/rewrites-3/*/hello/:id",
+            "destination": "/_next/static/chunks/:splat:id.js"
+        },
+        {
+            "source": "/rewr(i%tes-4/*/world/:id",
+            "destination": "/_next/static/chunks/:splat-:id.js"
+        },
+    ]
 }
