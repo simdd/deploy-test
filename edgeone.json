@@ -2,39 +2,13 @@
     "name": "yor*kyu-nextjs-template",
     "headers": [
         {
-            "source": "/*",
-            "headers": [
-                {
-                    "key": "X-Pages-Msg"
-                },
-                {
-                    "key": "X-Pages-Msg-2",
-                    "value": "1234"
-                }
-            ]
+            "source": "/*"
         },
         {
             "source": "/e/*/:name",
-            "headers": [
-                {
-                    "key": "X-Pages-Msg",
-                    "value": "hello :splat :name"
-                }
-            ]
+            "headers": []
         },
-        {
-            "source": "/headers-1/*",
-            "headers": [
-                {
-                    "key": "X-Pages-Msg-2",
-                    "value": "/headers/*, :splat 哈哈"
-                },
-                {
-                    "key": "X-Pages-Msg-3",
-                    "value": "/headers/* :spla 加啊t"
-                }
-            ]
-        },
+        {},
         {
             "source": "/headers-2/set/:id",
             "headers": [
