@@ -1,9 +1,5 @@
 {
-    "outputDirectory": "./",
-    "installCommand": "echo 1",
-    "buildCommand": "echo 1",
     "nodeVersion": "22",
-    "a": 1,
     "headers": [
         {
             "source": "1",
